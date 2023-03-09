@@ -1,15 +1,19 @@
 // imports
 const express = require("express");
-const cors = require("cors");
+const dotenv = require("dotenv");
+const connectDB = require("./config/db");
 const mongoose = require("mongoose");
-const connectDB = require("./config/connectDb");
+const cookieParser = require('cookie-parser')
+const cors = require("cors");
 const apiRoutes = require("./routes/apiRoutes");
 
+const app = express();
+dotenv.config(); //import config.env file
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 7000;
 
 // middlewares
-const app = express();
+
 mongoose.set("strictQuery", true);
 
 app.use(express.json());
