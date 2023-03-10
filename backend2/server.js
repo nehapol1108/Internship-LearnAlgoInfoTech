@@ -26,10 +26,6 @@ connectDB();
 // apis
 app.use("/",apiRoutes);
 
-app.get("/", (req, res) => {
-  res.status(200).send("hello world");
-});
-
 app.use(express.static(path.join(__dirname,'../my-project/build')));
 app.get('*',function(req,res){
   res.sendFile(path.join(__dirname,"../my-project/build/index.html"));
