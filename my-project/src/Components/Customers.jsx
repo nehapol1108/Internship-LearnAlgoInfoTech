@@ -7,15 +7,14 @@ const Customers = () => {
   const [customers, setCustomers] = useState([]);
   const [loading, setLoading] = useState(false);
   const fetchCustomers = async () => {
+    setLoading(true);
     const data = await axios.get("/customersdata");
     setCustomers(data.data);
-    console.log(data);
+    setLoading(false);
   };
   
   useEffect(() => {
-    setLoading(true);
     fetchCustomers();
-    setLoading(false);
   }, []);
   console.log(customers);
 
