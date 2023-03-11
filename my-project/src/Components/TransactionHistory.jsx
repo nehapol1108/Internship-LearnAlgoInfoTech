@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "../axios";
+import Footer from "./Footer";
+import Navbar from "./Navbar";
 import Spinner from "./Spinner";
 export default function TransactionHistory() {
     const [transactionData,settransactionData] = useState([]);
@@ -30,7 +32,7 @@ export default function TransactionHistory() {
       }
   return (
     <>
-
+<Navbar/>
 <div className="">
       <div className="flex justify-center items-center mt-10 ">
         <table className="">
@@ -56,6 +58,7 @@ export default function TransactionHistory() {
         </table>
       </div>
     </div>
+    <Footer/>
     </>
   )
 }

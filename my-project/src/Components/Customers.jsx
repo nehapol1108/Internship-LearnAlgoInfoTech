@@ -2,6 +2,8 @@ import axios from "../axios";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Spinner from "./Spinner";
+import Navbar from "./Navbar";
+import Footer from "./Footer";
 
 const Customers = () => {
   const [customers, setCustomers] = useState([]);
@@ -24,6 +26,8 @@ const Customers = () => {
     return <Spinner/>
   }
   return (
+    <>
+    <Navbar/>
     <div className="">
       <div className="flex justify-center items-center mt-10 ">
         <table className="">
@@ -66,6 +70,8 @@ const Customers = () => {
         </table>
       </div>
     </div>
+    <Footer/>
+    </>
   );
 };
 

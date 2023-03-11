@@ -3,6 +3,8 @@ import { Link, useParams } from "react-router-dom";
 import axios from "../axios";
 import { useNavigate } from "react-router";
 import Spinner from "./Spinner";
+import Navbar from "./Navbar";
+import Footer from "./Footer";
 const Customer = () => {
   const { id } = useParams();
   let navigate = useNavigate();
@@ -62,6 +64,7 @@ const Customer = () => {
   }
   return (
     <>
+    <Navbar/>
       <div className="flex flex-col items-center justify-center ">
         <div className="space-y-5 mt-12 w-[400px] border-2 border-blue-400 bg-blue-100 rounded-xl p-10 shadow-2xl">
           <div>
@@ -136,6 +139,7 @@ const Customer = () => {
           </button>
         </div>
       </div>
+      <Footer/>
     </>
   );
 };

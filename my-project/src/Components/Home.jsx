@@ -1,10 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Footer from "./Footer";
 import Hero from "./Hero";
+import Navbar from "./Navbar";
 
 const Home = () => {
   return (
     <>
+    <Navbar/>
     <Hero/>
     <section id="hero" className="d-flex justify-center align-items-top">
           <div id="transaction" className="container justify-center">
@@ -31,7 +34,7 @@ const Home = () => {
           </div>
           
         </section>
-      
+      <Footer/>
     </>
   );
 };

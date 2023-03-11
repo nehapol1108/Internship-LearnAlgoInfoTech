@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import axios from "../axios";
 import { useNavigate } from "react-router";
+import Navbar from "./Navbar";
+import Footer from "./Footer";
+import Spinner from "./Spinner";
 export default function AddUser() {
  const [name,setName] = useState();
  const [email,setEmail] = useState();
@@ -18,7 +21,6 @@ export default function AddUser() {
         };
         const data = await axios.post("/addcustomer",{name,email,balance},config);
         setLoading(false);
-        console.log(data);
         navigate("/customers");
         
     }catch(err){
@@ -26,8 +28,12 @@ export default function AddUser() {
         setLoading(false);
     }
   }
+  if (loading) {
+    return <Spinner/>
+  }
   return (
     <>
+    <Navbar/>
     <div className="flex flex-col items-center justify-center ">
         <div className="space-y-5 mt-12 w-[400px] border-2 border-blue-400 bg-blue-100 rounded-xl p-10 shadow-2xl">
     
@@ -83,6 +89,7 @@ export default function AddUser() {
         </div>
         
       </div>
+      <Footer/>
     </>
   )
 }
