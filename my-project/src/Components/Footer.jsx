@@ -34,7 +34,7 @@ export default function Footer() {
                 <hr className="mb-4 mt-0 d-inline-block mx-auto" style={{width: '60px', backgroundColor: '#7c4dff', height: '2px'}} />
                 <p>
                   Trasaction is a website where a customer can transfer money to someone's account and also can recieve money from someone.
-                  The transactions done will in realtime.
+                  The transactions will be done in realtime. The user can also view the transaction history. 
                 </p>
               </div>
               <div className="col-md-2 col-lg-2 col-xl-2 mx-auto">
@@ -42,17 +42,19 @@ export default function Footer() {
                 <h6 className="text-uppercase fw-bold">Links</h6>
                 <hr className="mb-4 mt-0 d-inline-block mx-auto" style={{width: '60px', backgroundColor: '#7c4dff', height: '2px'}} />
                 <p className="footertext">
-                  <a href="#!" className="text-white">Home</a>
+                  <a href="/" className="text-white">Home</a>
                 </p>
                 <p className="footertext">
-                  <a href="#!" className="text-white">About Us</a>
+                  <a href="/#hero" className="text-white">About Us</a>
                 </p>
                 <p className="footertext">
-                  <a href="#!" className="text-white">Help</a>
+                  <a href="/#transaction" className="text-white">Transaction</a>
                 </p>
+               
                 <p className="footertext">
-                  <a href="#!" className="text-white">Feedback</a>
+                  <a href="/customers" className="text-white">Customers</a>
                 </p>
+              
               </div>
               {/* Grid column */}
               {/* Grid column */}

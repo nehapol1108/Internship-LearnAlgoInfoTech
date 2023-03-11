@@ -45,7 +45,7 @@ export default function Navbar() {
                 <a
                   className="nav-link scrollto"
                   onClick={HideNavbar}
-                  href="#hero"
+                  href="/#hero"
                 >
                   <i className="bi bi-info-circle"></i> About us
                 </a>
