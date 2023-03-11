@@ -7,8 +7,7 @@ export default function TransactionHistory() {
     const [transactionData,settransactionData] = useState([]);
     const [loading,setLoading] = useState(false);
      const getTransactionData =async ()=>{
-       try{
-         
+       try{  
            setLoading(true);
            const {data} = await axios.get("/transferdata");
            console.log(data[0]._id);
@@ -22,9 +21,7 @@ export default function TransactionHistory() {
        }
      }
     useEffect(() => {
-    setLoading(true);
     getTransactionData();
-    setLoading(false);
     }, []);
 
     if (loading) {

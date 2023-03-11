@@ -26,9 +26,7 @@ const Customer = () => {
     setLoading(false);
   };
   useEffect(() => {
-    setLoading(true);
     fetchCustomers();
-    setLoading(false);
   }, []);
 
   const handleChange = (e) => {
